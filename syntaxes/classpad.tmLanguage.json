@@ -1,0 +1,61 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "classpad",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#strings"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.classpad",
+					"match": "\\b(If|Then|IfEnd|Else|ElseIf|Do|LpWhile|For|To|Step|Next|Skip|Return|Break|Stop|Pause|Wait)\\b"
+				},
+				{
+					"name": "keyword.function.classpad",
+					"match": "\\b(DelVar|MoveVar|CopyVar|PrintNatural|StrJoin|StrCmp|ExpToStr|StrToExp|GetType|GetFolder|DelFolder|NewFolder|SetComplex|SetReal)\\b"
+				},
+				{
+					"name": "entity.name.function.classpad",
+					"match": "\\b(fMax|fMin|getRight|getLeft|solve|approx|diff|impDiff|cos|sin|tan|augment|subList|sum|ref|rref|subMat|colDim|rowDim|listToMat|matToList|trn|dim|abs|arg|im|re|expand|collect|simplify)\\b"
+				},
+				{
+					"name": "comment.line.classpad",
+					"match": "^'.*"
+				},
+				{
+					"name": "keyword.operator.assignment.classpad",
+					"match": "\\b(⇒)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.classpad",
+					"match": "\\b(and|or|not)\\b"
+				},
+				{
+					"name": "punctuation.terminator.statement.classpad",
+					"match": ":"
+				}
+			]
+		},
+        "assignment-operator": {
+            "name": "keyword.operator.assignment.classpad"
+        },
+        "logical-operator": {
+            "name": "keyword.operator.logical.classpad"
+        },
+		"strings": {
+			"name": "string.quoted.double.classpad",
+			"begin": "\"",
+			"end": "\""
+		},
+		"comment": {
+			"name": "comment.line.classpad"
+		},
+		"terminator": {
+			"name": "punctuation.terminator.statement.classpad"
+		}
+		
+	},
+	"scopeName": "source.classpad"
+}
